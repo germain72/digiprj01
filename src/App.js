@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Tick from "./Tick";
+/**
+ * Comp01 est un composant React (JSX)
+ * @returns un render
+ */
+function Comp01(props) {
+  return(<h1>{props.message}</h1>)
+}
 
+
+/**
+ * 
+ * @returns 
+ */
 function App() {
+  let onCallBack = (e)=>{console.log("App")}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Comp01 message='DIGI 01'/>
+      <Comp01 message='DIGI 02'/>
+      <Comp01 message='' />
+      <Tick 
+      message=
+      "Horloge DIGI 2024-M05"
+      cb={onCallBack}/>
     </div>
   );
 }
