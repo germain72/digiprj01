@@ -36,7 +36,7 @@ export default class MonBody extends React.Component {
         this.componentWillUnmount()
     }
     onStop = (e) => {
-        this.chrono = undefined
+        this.chrono = new Date()
         this.componentWillUnmount()
     }
     onStart = (e) => {
